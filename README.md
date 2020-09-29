@@ -12,7 +12,7 @@ Implementation of a simple Tetris game with java language
  ing screen or another block which has previously fallen. The player positions the
  falling blocks by moving them left and right and by rotating them.
  <br/>
-  ![Screenshot](docs/game-of-tetris.png)
+ <div align="center"> ![Screenshot](docs/game-of-tetris.png) </div>
   
  In this section some important part of the specification of the Tetris game presented. The specification of the game comprises 11 classes which are shown as a class hierarchy in following picture. In addition, a class with the name of Tetris uses this class hierarchy to specify the process of the Tetris game.
   <br/>
