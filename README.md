@@ -54,3 +54,9 @@ Implementation of a simple Tetris game with java language
   Class `Rectangle` inherits `Block` and assigns the width (and the height) of the grid with 4.
      <br/>
         ![Screenshot](docs/tetris-blocks.png)
+        
+  ## Build and Run
+  The screen shot of the program is in the below.
+       <br/>
+          ![Screenshot](docs/tetris-screen-shot.png)
+  
