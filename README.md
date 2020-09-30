@@ -1,5 +1,8 @@
-# jtetris
-Implementation of a simple Tetris game with java language
+# JTetris: Java Tetris Game
+This repo contains implementation of a simple Tetris game with java language. 
+Tetris is a tile-matching puzzle game originally designed and programmed by Alexey Pajitnov in the Soviet Union.
+The intention for this implementation is for educational purposes like design and implement a object oriented case study. Also this 
+this implementation is based on formal requirements and specification, therefor it can be used for deriving specification based tests.
 
 ## Tetris Specificatin
  The game is played by a single player on a computer screen. A typical snapshot is shown in the following figure.
@@ -56,7 +59,9 @@ Implementation of a simple Tetris game with java language
         ![Screenshot](docs/tetris-blocks.png)
         
   ## Build and Run
-  The screen shot of the program is in the below.
+  The project has no dependeny and can be compiled and run on Java 6+.
+  Compile and run the main method in `GameLuncher` class.
+  The screenshots of the program is in the below.
        <br/>
           ![Screenshot](docs/tetris-screen-shot.png)
   
