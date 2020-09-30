@@ -19,13 +19,16 @@ therefor it can be used for deriving specification based tests.
  ing screen or another block which has previously fallen. The player positions the
  falling blocks by moving them left and right and by rotating them.
  <br/>
+ <br/>
  ![Screenshot](docs/game-of-tetris.png) 
-    ### Classes Hierarchy
+ 
+ ### Classes Hierarchy
  In this section some important part of the specification of the Tetris game presented. 
  The specification of the game comprises 11 classes 
  which are shown as a class hierarchy in following picture. 
  In addition, a class with the name of Tetris uses this class hierarchy to specify the process of the Tetris game.
-  <br/>
+ <br/>
+ <br/>
    ![Screenshot](docs/tetris-classes.png)
    ### Class Grid
    The Gird class is an abstract class which models two-dimensional grid which can show any form of two-dimensional screen.
@@ -35,7 +38,8 @@ therefor it can be used for deriving specification based tests.
     As an example, 
     a grid object with `width = 4`, `height = 6`
     and `occupied = { ( 0,0 ), ( 1,2 ), ( 2,2 ), ( 2,3 )` is given in the right side of the following picture.
-<br/>
+ <br/>
+ <br/>
    ![Screenshot](docs/tetris-grid.png)
    ### Class Screen
    Class `Screen` specifies the screen where the game is drawn. 
@@ -49,7 +53,8 @@ therefor it can be used for deriving specification based tests.
     the block’s position on the playing screen as shown in the following image.
    This class defines operations `MoveRight`, `MoveLeft` and `MoveDown`, respectively, to move the block to the right, left and down on the screen. 
    Operation `Rotate` is responsible for rotating the block on the screen. It is only specified as abstract in `Block, and descendant classes are responsible for its precise definition.
-   <br/>
+ <br/>
+ <br/>
       ![Screenshot](docs/tetris-block-in-screen.png)
   ### All types of the Tetris blocks
   All block of the game are shown in the following picture. 
@@ -62,13 +67,15 @@ therefor it can be used for deriving specification based tests.
   which have a particular initial configuration of occupied positions (classes `T`, `S`, `L`, `Z` and `ReverseL`). 
   The final block type to be specified is rectangle. Right side of the following picture shows this shape. 
   Class `Rectangle` inherits `Block` and assigns the width (and the height) of the grid with 4.
-     <br/>
+ <br/>
+ <br/>
         ![Screenshot](docs/tetris-blocks.png)
         
   ## Build and Run
   The project has no dependeny and can be compiled and run on Java 6+.
   Compile the project and run the main method in `GameLuncher` class.
   The snapshot of the running program is in the below.
-       <br/>
+ <br/>
+ <br/>
           ![Screenshot](docs/tetris-screen-shot.png)
   
