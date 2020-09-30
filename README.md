@@ -8,7 +8,7 @@ Also design of classed are based on formal requirements and specification
 (you can find the whole case study in G Smith thesis titled Object-Z Specification language), 
 therefor it can be used for deriving specification based tests.
 
-## Tetris Specificatin
+## Tetris Specification
  The game is played by a single player on a computer screen. A typical snapshot is shown in the following figure.
  The goal of the player of Tetris is to position falling blocks of various shapes so
  that entire rows of the playing screen are filled. When a row is filled, it disappears
