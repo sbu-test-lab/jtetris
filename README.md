@@ -1,8 +1,12 @@
 # JTetris: Java Tetris Game
 This repo contains implementation of a simple Tetris game with java language. 
-Tetris is a tile-matching puzzle game originally designed and programmed by Alexey Pajitnov in the Soviet Union.
-The intention for this implementation is for educational purposes like design and implement a object oriented case study. Also this 
-this implementation is based on formal requirements and specification, therefor it can be used for deriving specification based tests.
+Tetris is a tile-matching puzzle game originally designed and programmed by 
+Alexey Pajitnov in the Soviet Union.
+The intention for this implementation is for educational purposes like design 
+and implement a object oriented case study or deriving tests for an OOP program. 
+Also design of classed are based on formal requirements and specification 
+(you can find the whole case study in G Smith thesis titled Object-Z Specification language), 
+therefor it can be used for deriving specification based tests.
 
 ## Tetris Specificatin
  The game is played by a single player on a computer screen. A typical snapshot is shown in the following figure.
@@ -16,8 +20,11 @@ this implementation is based on formal requirements and specification, therefor 
  falling blocks by moving them left and right and by rotating them.
  <br/>
  ![Screenshot](docs/game-of-tetris.png) 
- 
- In this section some important part of the specification of the Tetris game presented. The specification of the game comprises 11 classes which are shown as a class hierarchy in following picture. In addition, a class with the name of Tetris uses this class hierarchy to specify the process of the Tetris game.
+    ### Classes Hierarchy
+ In this section some important part of the specification of the Tetris game presented. 
+ The specification of the game comprises 11 classes 
+ which are shown as a class hierarchy in following picture. 
+ In addition, a class with the name of Tetris uses this class hierarchy to specify the process of the Tetris game.
   <br/>
    ![Screenshot](docs/tetris-classes.png)
    ### Class Grid
@@ -60,8 +67,8 @@ this implementation is based on formal requirements and specification, therefor 
         
   ## Build and Run
   The project has no dependeny and can be compiled and run on Java 6+.
-  Compile and run the main method in `GameLuncher` class.
-  The screenshots of the program is in the below.
+  Compile the project and run the main method in `GameLuncher` class.
+  The snapshot of the running program is in the below.
        <br/>
           ![Screenshot](docs/tetris-screen-shot.png)
   
