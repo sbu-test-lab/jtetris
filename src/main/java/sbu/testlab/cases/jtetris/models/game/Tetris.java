@@ -17,12 +17,11 @@ import java.util.Random;
  * a block moving down one row, a block being added to the screen, and a row
  * being removed, are controlled by the GameController class.
  */
-public class Tetris
-{
-    public static int DIRECT = 0;
-    public static int LEFT = 1;
-    public static int RIGHT = 2;
-    public static int ROTATE = 3;
+public class Tetris {
+    private static int DIRECT = 0;
+    private static int LEFT = 1;
+    private static int RIGHT = 2;
+    private static int ROTATE = 3;
 
     /**
      * The random seed is a fixed number by intention to grantee deterministic behavior
@@ -34,6 +33,7 @@ public class Tetris
     public Screen screen;
     public Block block;
     public int score;
+    private boolean gameOver = false;
 
     public Tetris() {
         screen = new Screen();
@@ -41,9 +41,24 @@ public class Tetris
         addBlock();
     }
 
-    public void runOneStep(int dir)  {
-        if (!screen.isFinish(block.beAddedToScreen()))
-        {
+    public void moveDown() {
+        runOneStep(DIRECT);
+    }
+
+    public void moveLeft() {
+        runOneStep(LEFT);
+    }
+
+    public void moveRight() {
+        runOneStep(RIGHT);
+    }
+
+    public void rotate() {
+        runOneStep(ROTATE);
+    }
+
+    private void runOneStep(int dir) {
+        if (!screen.isFinish(block.beAddedToScreen())) {
             if (dir == LEFT)
                 block.moveLeft();
             else if (dir == RIGHT)
@@ -51,49 +66,54 @@ public class Tetris
             else if (dir == ROTATE)
                 block.rotate();
             else
-                block.moveDown();   
+                block.moveDown();
         }
-        else
-        {
+        //block is at end of its movement
+        else {
+            //add block to the screen
             screen.addBlock(block.beAddedToScreen());
-            addBlock();
-        } 
+
+            //check if game is over (if any cell of top row is fill)
+            if (isAnyCellOfLastRowFill())
+                gameOver = true;
+            else
+                addBlock();
+        }
         screen.removeBlock(this);
     }
 
     public Grid getGameFrame() {
-        return screen.union(screen,block.beAddedToScreen());
+        return screen.union(screen, block.beAddedToScreen());
     }
 
     public void addBlock() {
 
-        switch(random.nextInt(8))
-        {
-            case 0: 
+        switch (random.nextInt(8)) {
+            case 0:
                 block = new Square();
                 break;
-            case 1: 
+            case 1:
                 block = new Rectangle();
                 break;
-            case 2: 
+            case 2:
                 block = new Square();
                 break;
-            case 3: 
+            case 3:
                 block = new L();
                 break;
-            case 4: 
+            case 4:
                 block = new S();
                 break;
-            case 5: 
+            case 5:
                 block = new T();
                 break;
-            case 6: 
+            case 6:
                 block = new Z();
                 break;
-            case 7: 
+            case 7:
                 block = new ReverseL();
                 break;
-        
+
         }
     }
 
@@ -101,6 +121,22 @@ public class Tetris
         score += 10;
     }
 
+    private boolean isAnyCellOfLastRowFill() {
+        Grid g = screen;
+        int w = g.occupied.length;
+        int h = g.occupied[0].length;
+
+        boolean result = false;
+        for (int i = 0; i < w; i++)
+            if (g.occupied[i][h - 1])
+                result = true;
+
+        return result;
+    }
+
+    public boolean isGameOver() {
+        return gameOver;
+    }
 }
 
 

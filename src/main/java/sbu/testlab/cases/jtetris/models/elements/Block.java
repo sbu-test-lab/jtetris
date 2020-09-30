@@ -11,7 +11,7 @@ package sbu.testlab.cases.jtetris.models.elements;
  * We also add state variables x_position and y_position denoting
  * the block’s position on the playing screen
  */
-abstract public class Block  extends Grid 
+abstract public class Block extends Grid
 {
     public int x_position, y_position;
 
