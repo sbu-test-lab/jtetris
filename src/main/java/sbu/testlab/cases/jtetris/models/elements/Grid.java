@@ -1,7 +1,3 @@
-//
-// Translated by CS2J (http://www.cs2j.com): 9/29/2020 3:11:49 PM
-//
-
 package sbu.testlab.cases.jtetris.models.elements;
 
 /**
@@ -46,7 +42,7 @@ public class Grid {
         return false;
     }
 
-    public boolean[][] union(boolean[][] c1, boolean[][] c2) {
+    protected boolean[][] union(boolean[][] c1, boolean[][] c2) {
         int w=c1.length;
         int h=c1[0].length;
         boolean[][] result = new boolean[w][h];
@@ -62,7 +58,7 @@ public class Grid {
         return result;
     }
 
-    public boolean isRow(int index, boolean predicate){
+    protected boolean isRow(int index, boolean predicate){
         Grid g = this;
         int w = g.occupied.length;
 
@@ -74,7 +70,7 @@ public class Grid {
         return r;
     }
 
-    public boolean isColumn(int index, boolean predicate) {
+    protected boolean isColumn(int index, boolean predicate) {
         Grid g = this;
         int h = g.occupied[0].length;
 

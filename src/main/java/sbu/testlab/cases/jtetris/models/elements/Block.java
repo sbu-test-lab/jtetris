@@ -1,7 +1,3 @@
-//
-// Translated by CS2J (http://www.cs2j.com): 9/29/2020 3:11:49 PM
-//
-
 package sbu.testlab.cases.jtetris.models.elements;
 
 /**
@@ -18,7 +14,7 @@ abstract public class Block extends Grid
     public Block(int len) {
         super(len, len);
         y_position = 22 - height;
-        x_position = 3;
+        x_position = 0;
     }
 
     public void moveRight() {

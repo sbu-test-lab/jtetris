@@ -1,7 +1,3 @@
-//
-// Translated by CS2J (http://www.cs2j.com): 9/29/2020 3:11:49 PM
-//
-
 package sbu.testlab.cases.jtetris.models.elements;
 
 /**
