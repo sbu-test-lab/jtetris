@@ -17,10 +17,10 @@ public class Square  extends Block
         occupied[1][1] = true;
     }
 
-    @Override
-    public void rotate(){
-        // do nothing
-    }
+//    @Override
+//    public void rotate(){
+//        // do nothing
+//    }
 }
 
 
