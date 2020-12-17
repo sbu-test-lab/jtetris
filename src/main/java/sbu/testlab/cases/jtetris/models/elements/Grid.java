@@ -17,11 +17,11 @@ public class Grid {
         occupied = new boolean[w][h];
     }
 
-    protected void fillCell(int x, int y) {
+    public void fillCell(int x, int y) {
         occupied[x][y] = true;
     }
 
-    protected void unFillCell(int x, int y){
+    public void unFillCell(int x, int y){
         occupied[x][y] = false;
     }
 
@@ -42,7 +42,7 @@ public class Grid {
         return false;
     }
 
-    protected boolean[][] union(boolean[][] c1, boolean[][] c2) {
+    public boolean[][] union(boolean[][] c1, boolean[][] c2) {
         int w=c1.length;
         int h=c1[0].length;
         boolean[][] result = new boolean[w][h];
@@ -58,7 +58,7 @@ public class Grid {
         return result;
     }
 
-    protected boolean isRow(int index, boolean predicate){
+    public boolean isRow(int index, boolean predicate){
         Grid g = this;
         int w = g.occupied.length;
 
@@ -70,7 +70,7 @@ public class Grid {
         return r;
     }
 
-    protected boolean isColumn(int index, boolean predicate) {
+    public boolean isColumn(int index, boolean predicate) {
         Grid g = this;
         int h = g.occupied[0].length;
 
